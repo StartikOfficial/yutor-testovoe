@@ -1,3 +1,7 @@
+:root {
+    --container-width: 400px;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,8 +9,8 @@
 }
 
 .figures {
-    width: 404px;
-    height: 404px;
+    width: var(--container-width);
+    height: var(--container-width);
     position: relative;
     background-color: #d9d9d9;
 }
@@ -17,51 +21,51 @@
 
 .circle-small {
     background-color: #0ca565;
-    width: 101px;
-    height: 101px;
+    width: 25%; /* 100px/400px */
+    height: 25%; /* 100px/400px */
     border-radius: 50%;
-    top: 137px;
-    right: 77px;
+    top: 34%; /* 136px/400px */
+    right: 19%; /* 76px/400px */
     z-index: 1;
 }
 
 .circle-darkgreen {
-    width: 322px;
-    height: 322px;
+    width: 80%; /* 320px/400px */
+    height: 80%; /* 320px/400px */
     background-color: #248456;
-    clip-path: circle(50% at 67px 54px);
-    -webkit-clip-path: circle(50% at 67px 54px);
+    clip-path: circle(50%);
+    -webkit-clip-path: circle(50% at 20.6% 16.6%); 
 }
 
 .rectangle-blue {
     background-color: #1b3f99;
     /* background-color: yellow; */
-    height: 47px;
-    width: 306px;
+    height: 11.6%; /* ~46px/400px */
+    width: 77%; /* ~308px/400px */
     transform: rotate(47deg);
-    left: 46px;
-    top: 152px;
+    left: 11.1%;
+    top: 38.1%; /* 157px/400px */
     z-index: 0;
 }
 
 .triangle-half-red {
     background-color: #ca3704;
     clip-path: polygon(100% 0, 0% 100%, 100% 100%);
-    width: 100px;
-    height: 109px;
+    width: 25%; /* 100px/400px */
+    height: 27%; /* 108px/400px */
     right: 0;
 }
 
 .rectangle-round {
     background-color: #920fbf;
-    width: 302px;
-    height: 81px;
+    width: 75%; /* 300px/400px */
+    height: 20%; /* 80px/400px */
     margin: 0 auto;
     left: 0;
     right: 0;
     /* margin-left: 50px; */
     z-index: 1;
-    border-radius: 30px;
-    bottom: 53px;
+    border-radius: calc(3/40*var(--container-width)); /* 30px/400px */
+    bottom: 13%; /* 52px/400px */
 }
 
